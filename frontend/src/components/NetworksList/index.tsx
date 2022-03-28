@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { useQuery } from "react-query";
 import { AppContext } from "../../contexts/appContext";
 import { FetchService } from "../../services/fetchService";
+import Error from "../Error";
 
 
 const NetworksList = () => {
@@ -10,9 +11,9 @@ const NetworksList = () => {
   const { isLoading, error, data } = useQuery("blockchains", 
                                               () => FetchService.fetch("blockchains"));
 
-  if (isLoading) return <div>Loading...</div>; //TODO - Loading component
+  if (isLoading) return <div></div>; //Loading
 
-  if (error) return <div>An error has occurred</div>; //TODO - Error component
+  if (error) return <Error/>; //Error
 
   return (
     <select

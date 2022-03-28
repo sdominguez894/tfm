@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Route, Router, Routes } from "react-router-dom";
 import { AppContext, defaultBlockchain } from "../../contexts/appContext";
+import AddressPage from "../../routes/AddressPage";
 import BlockDetailsPage from "../../routes/BlockDetailsPage";
 import BlocksPage from "../../routes/BlocksPage";
+import ErrorPage from "../../routes/ErrorPage";
 import MainPage from "../../routes/MainPage";
 import TransactionDetailsPage from "../../routes/TransactionDetailsPage";
 import TransactionsPage from "../../routes/TransactionsPage";
@@ -23,6 +25,8 @@ const App = () => {
                 {/* Show different content based on route */}
                 <Routes>
                     <Route path="/" element={<MainPage />} />
+                    <Route path="/error" element={<ErrorPage />} />
+                    <Route path="address/:id" element={<AddressPage />} />
                     <Route path="blocks" element={<BlocksPage />} />
                     <Route path="transactions" element={<TransactionsPage />} />
                     <Route path="blocks/:blockId" element={<BlockDetailsPage />} />

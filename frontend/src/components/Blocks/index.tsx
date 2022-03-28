@@ -5,6 +5,7 @@ import { FetchService } from "../../services/fetchService";
 import Loading from "../Loading";
 import Error from "../Error";
 import { Block } from "../../Models/Block";
+import { Link } from "react-router-dom";
 
 
 const Blocks = () => {
@@ -18,7 +19,6 @@ const Blocks = () => {
   if (error) return <Error/>;
 
   return (
-
     
     /* Blocks table */
     <table className="table m-2 p-2">
@@ -33,8 +33,8 @@ const Blocks = () => {
       <tbody>
         {data.map((block: Block) => (
           <tr key={block.id}>
-            <th scope="row">{block.id}</th>
-            <td>{block.miner}</td>
+            <th scope="row"><Link to={`/blocks/${block.id}`}>{block.id}</Link></th>
+            <td><Link to={`/address/${block.miner}`}>{block.miner}</Link></td>
             <td>{block.difficulty}</td>
             <td>{block.timestamp}</td>
           </tr>

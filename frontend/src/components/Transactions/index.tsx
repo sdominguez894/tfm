@@ -5,6 +5,7 @@ import { FetchService } from "../../services/fetchService";
 import Loading from "../Loading";
 import Error from "../Error";
 import { Transaction } from "../../Models/Transactions";
+import { Link } from "react-router-dom";
 
 const Transactions = () => {
 
@@ -30,9 +31,14 @@ const Transactions = () => {
       <tbody>
         {data.map((tx: Transaction) => (
           <tr key={tx.id}>
-            <th scope="row">{tx.id}</th>
-            <td>{tx.from}</td>
-            <td>{tx.to}</td>
+            <th scope="row">
+              {/** Show only first 5 and last 5 characters**/}
+              <Link to={`/transactions/${tx.id}`}>
+                {`${tx.id.substring(0, 5)}...${tx.id.substring(tx.id.length - 5)}`}
+              </Link>
+              </th>
+            <td><Link to={`/address/${tx.from}`}>{tx.from}</Link></td>
+            <td><Link to={`/address/${tx.to}`}>{tx.to}</Link></td>
             <td>{tx.value}</td>
             <td>{tx.block}</td>
           </tr>

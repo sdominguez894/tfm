@@ -1,5 +1,5 @@
 
-from explorer.providers.eth.eth_provider import EthProvider
+from explorer.providers.eth.provider import EthProvider
 from explorer.providers.provider import ProviderInterface
 from explorer.models.blockchains import Blockchains
 
