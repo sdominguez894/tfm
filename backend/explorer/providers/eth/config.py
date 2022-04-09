@@ -1,1 +1,0 @@
-INFURA_URL = "https://mainnet.infura.io/v3/c67d12b48e93459a9afffac82b7039b3"
