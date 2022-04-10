@@ -3,8 +3,8 @@ from fastapi import FastAPI, Depends
 from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 
-from routers   import address, blockchains, blocks, transactions, search, summary
-from explorer_setup import ExplorerSetup
+from src.routers   import address, blockchains, blocks, transactions, search, summary
+from src.explorer_setup import ExplorerSetup
 
 #Configure providers and services
 ExplorerSetup.setup()
