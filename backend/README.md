@@ -18,3 +18,15 @@ For development, start the server with the flag --reload to use hot-reload:
 
 After the server startup, visualize the interactive documentation of the web API in your browser at  [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) or alternatively at [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc) 
 
+
+## Docker
+
+To build the docker image run the following command:
+
+    docker build -t your_username/multichain-explorer .
+
+To run the docker image, run:
+
+    docker run -p 8000:8000 your_username/multichain-explorer
+
+    
