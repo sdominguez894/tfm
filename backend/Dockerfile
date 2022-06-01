@@ -44,4 +44,7 @@ FROM python-base as production
 COPY --from=builder-base $PYSETUP_PATH $PYSETUP_PATH
 COPY ./src /src/
 COPY config.py config.py
-CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+EXPOSE 80
+
+CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "80" ] 

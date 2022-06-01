@@ -7,9 +7,10 @@ authors = ["sdominguez894 <sdominguez894@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.10"
 fastapi = "^0.74.1"
-web3 = "^5.28"
 uvicorn = "^0.17.5"
-multichain-explorer = "^0.1.2"
+multichain-explorer = "^0.1.6"
+
+terra-proto = "1.0.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.1"

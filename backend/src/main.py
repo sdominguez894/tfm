@@ -12,6 +12,7 @@ ExplorerSetup.setup()
 app = FastAPI()
 
 origins = [
+    "http://block-explorer.tk",
     "http://localhost",
     "http://localhost:3000",
 ]

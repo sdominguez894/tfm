@@ -23,10 +23,13 @@ After the server startup, visualize the interactive documentation of the web API
 
 To build the docker image run the following command:
 
-    docker build -t your_username/multichain-explorer .
+    docker build -t your_username/multichain-backend . 
 
 To run the docker image, run:
 
-    docker run -p 8000:8000 your_username/multichain-explorer
+    docker run your_username/multichain-backend
 
-    
+To push the docker image to Docker Hub, run:
+
+    docker push your_username/multichain-backend
+
