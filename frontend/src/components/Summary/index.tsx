@@ -11,17 +11,12 @@ const Summary = () => {
 
   const rawParam = 'raw=True';
   const { blockchain } = useContext(AppContext);
-  const { isLoading, error, data } = useQuery("summary", 
-                                              () => FetchService.fetch(`${blockchain}/summary`));
+  const { isLoading, error, data } =  useQuery(["summary", blockchain], () => FetchService.fetch(`${blockchain}/summary`));
+
 
   if (isLoading) return <Loading/>;
 
   if (error) return <Error/>;
-
-    {/*
-      marketCap
-      totalSupply 
-    */}
 
     return (
       <>

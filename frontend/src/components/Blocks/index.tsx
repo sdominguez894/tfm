@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 const Blocks = () => {
 
   const { blockchain, setBlockchain } = useContext(AppContext);
-  const { isLoading, error, data } = useQuery("blocks", 
+  const { isLoading, error, data } = useQuery(["blocks", blockchain],
                                               () => FetchService.fetch(`${blockchain}/blocks`));
 
   if (isLoading) return <Loading/>;

@@ -44,3 +44,18 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+## Docker
+
+To build the docker image run the following command:
+
+    docker build -t your_username/multichain-frontend .
+
+To run the docker image, run:
+
+    docker run your_username/multichain-frontend
+
+To push the docker image to Docker Hub, run:
+
+    docker push your_username/multichain-frontend

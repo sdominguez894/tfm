@@ -8,7 +8,7 @@ const Loading = () => {
             <div className="loading">
                 <h3 className="loading__title">Loading... </h3>
                 <img className="loading__img"
-                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Loader.gif/256px-Loader.gif" 
+                     src="/loading-icon.gif" 
                      alt="Loading"/>
             </div>
         </>
